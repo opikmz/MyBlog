@@ -25,7 +25,7 @@ Route::post('/act_login', [loginC::class, 'act_login'])->name('act_login');
 
 
 Route::middleware(['auth'])->group(function() {
-    Route::get('/logout', [loginC::class, 'logout'])->name('logout');
+    Route::get('/logout', [loginC::class, 'logout'])->name('logout');;
     
     Route::get('/dashboard', [dashboardC::class, 'index'])->name('dashboard');
     Route::get('/blog_saya', [blogC::class, 'index'])->name('blog');
